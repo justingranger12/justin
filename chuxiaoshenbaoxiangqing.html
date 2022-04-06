@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- saved from url=(0129)http://23.225.191.45/gduf_io/student-detail.html?studentName=%E5%91%A8%E6%98%9F%E6%98%9F&studentId=199854088&studentSex=%E7%94%B7 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>出校申报详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+    <style>
+        body {
+            background: #fff;
+            padding-bottom: 45px;
+        }
+		.title-bar {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			background-color: #6cb0fb;
+			color: #fff;
+			padding: 10px 5px;
+		}
+		.title-bar .title-text {
+			flex: 1;
+			padding-left: 16px;
+		}
+		.title-bar .title-icon {
+			width: 26px;
+			height: 26px;
+		}
+        .mui-content {
+            background: #fff;
+        }
+
+        .title {
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .outScholTitle {
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            background: #f5f5f5;
+            line-height: 30px;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+
+        .outScholContent {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .outScholContent {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .outScholContent label {
+            color: #666;
+        }
+
+        .outScholContent span {
+            color: #000;
+        }
+
+        #urlBox {
+            padding: 0 20px 20px 20px;
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        #urlBox div {
+            width: 100%;
+            overflow: hidden;
+            display: block;
+        }
+
+        #urlBox a {
+            color: blue;
+            word-break: break-all;
+        }
+
+        /*.mui-popup-button{color: red;}*/
+    </style>
+</head>
+
+<body>
+	<div class="title-bar">
+		<a class="return">
+			<img class="title-icon" src="./img/return.png">
+		</a>
+		<a class="return">
+			<img class="title-icon" src="./img/close.png">
+		</a>
+		<span style="width:100%;text-align:left;display:block; class="title-text">&nbsp&nbsp出校申报</span>
+	
+		<img class="title-icon" src="./img/more.png">
+	</div>
+    <div class="mui-content">
+        <div id="txtBox">
+            <div class="title"><span id="name">周星星</span>的出校申报详情单</div>
+            <div class="outScholTitle">申请人</div>
+            <div class="space"></div>
+            <div class="outScholContent" id="studentBox"><div><label>姓名：</label><span>周星星</span></div><div><label>学号：</label><span>199854088</span></div><div><label>性别：</label><span>男</span></div><div><label>学院：</label><span>互联网金融与信息工程学院</span></div><div><label>专业：</label><span>互联网金融</span></div><div><label>班级：</label><span>20互联网金融-1班</span></div><div><label>年级：</label><span>2020</span></div></div>
+            <div class="space"></div>
+            <div class="outScholTitle">申请内容</div>
+            <div class="space"></div>
+            <div class="outScholContent" id="outScholDetailBox"><div><label>申请编号：</label><span>2022032256984</span></div><div><label>外出类型：</label><span>临时出校（一天仅一次）</span></div><div><label>外出去向：</label><span>广东省广州市天河区</span></div><div><label>开始时间：</label><span>2022-03-22</span></div><div><label>结束时间：</label><span>2022-03-25</span></div><div><label>涉及天数：</label><span>3</span></div><div><label>出入次数：</label><span>每天出入一次</span></div><div><label>提交时间：</label><span>2022-03-22 14:43:55</span></div><div><label>联系电话：</label><span>13044017528</span></div><div><label>紧急联系人：</label><span>周星星</span></div><div><label>紧急联系人电话：</label><span>13016002998</span></div></div>
+            <div class="outScholContent" id="imagesBox"></div>
+            <div class="space"></div>
+            <div class="outScholTitle" id="auditTitleBox">审批记录</div>
+            <div class="space"></div>
+            <div class="outScholContent" id="auditBox"><div><label>报备状态：</label><span>报备完成</span></div></div>
+            <div class="space"></div>
+        </div>
+        <div class="outScholContent" id="imagesBox"></div>
+    </div>
+    <div id="imgBox"></div>
+    <div id="urlBox"></div>
+    <nav class="footerNav outSchool">
+        <button style="width: 20%;" class="bzBtn whiteBtn" type="button" onclick="addImg()" disabled="disabled">
+            <span>补正</span>
+        </button>
+
+        <button style="width: 40%;" class="createOutBtn greenBtn" type="button" onclick="outSchool()">
+            <span>生成出校凭证</span>
+        </button>
+
+        <button style="width: 40%;" class="createInBtn blueBtn" type="button" onclick="inSchool()">
+            <span>生成入校凭证</span>
+        </button>
+    </nav>
+    <script src="./mui.min.js.download"></script>
+    <script src="./jquery.min.js.download"></script>
+    <script src="./common.js.download"></script>
+    <script type="text/javascript" src="./util.js.download"></script>
+    <script type="text/javascript" charset="utf-8">
+        function outSchool() {
+            var txt = '出校凭证有效时间仅5分钟，请确定你已在校门附近准备出校？';
+            var btnArray = ['是', '否'];
+            mui.confirm(txt, '重要提示！！！', btnArray, function (e) {
+                window.location.href = "chu.html" ;
+            })
+        }
+
+        function inSchool() {
+            var txt = '<p style="color:red">入校凭证有效时间仅5分钟，请确定你已在校门附近准备入校？</p>';
+            var btnArray = ['是', '否'];
+            mui.confirm(txt, '<p style="color:red;font-weight:bold">重要提示！！！</p>', btnArray, function (e) {
+                window.location.href = "black.html" ;
+            })
+        }
+
+        function getMyOutSchool(result) {
+            $("#name").html(getParam()["studentName"])
+            var html = '';
+            html += '<div><label>姓名：</label><span>' + getParam()["studentName"] + '</span></div>';
+            html += '<div><label>学号：</label><span>' + getParam()["studentId"] + '</span></div>';
+            html += '<div><label>性别：</label><span>' + getParam()["studentSex"] + '</span></div>';
+            html += '<div><label>学院：</label><span>发学院</span></div>';
+            html += '<div><label>专业：</label><span>互联网金融</span></div>';
+            html += '<div><label>班级：</label><span>20互联网金融-1班</span></div>';
+            html += '<div><label>年级：</label><span>' + '20' + getParam()["studentId"].substr(0, 2) + '</span></div>';
+            $("#studentBox").html(html);
+            var html = '';
+            html += '<div><label>申请编号：</label><span>' + randomOutSchoolID() + '</span></div>';
+            html += '<div><label>外出类型：</label><span>临时出校（一天仅一次）</span></div>';
+            html += '<div><label>外出去向：</label><span>广东省广州市天河区</span></div>';
+            html += '<div><label>开始时间：</label><span>' + new Date().Format("yyyy-MM-dd") + '</span></div>';
+            html += '<div><label>结束时间：</label><span>' + new Date(new Date().getTime() + 259200000).Format("yyyy-MM-dd") + '</span></div>';
+            html += '<div><label>涉及天数：</label><span>3</span></div>';
+            html += '<div><label>出入次数：</label><span>每天出入一次</span></div>';
+            html += '<div><label>提交时间：</label><span>' + new Date(new Date().getTime() - 14400000).Format("yyyy-MM-dd hh:mm:ss") + '</span></div>';
+            html += '<div><label>联系电话：</label><span>' + getMoble() + '</span></div>';
+            html += '<div><label>紧急联系人：</label><span></span></div>';
+            html += '<div><label>紧急联系人电话：</label><span>' + getMoble() + '</span></div>';
+            $("#outScholDetailBox").html(html);
+            var html = '';
+            var auditRole = "";
+            if (Math.random() <= 0.5) {
+                auditRole = "（辅导员）";
+            } else {
+                auditRole = "（学院党总支）";
+            };
+            html += '<div><label>审批老师1：</label><span>雍和明' + auditRole + '</span></div>';
+            html += '<div><label>审批状态1：</label><span>审批通过</span></div>';
+            html += '<div><label>审批时间1：</label><span>' + new Date(new Date().getTime() - 7229394).Format("yyyy/MM/dd hh:mm:ss") + '</span></div>';
+            $("#auditBox").html(html);
+
+            $(".createImgBtn").attr("disabled", false);
+            $(".createOutBtn").attr("disabled", false);
+            $(".createInBtn").attr("disabled", false);
+        }
+    </script>
+	<div id="header">
+		<div id="wai">
+			<a href="chuxiaoshenbaoxiangqing.html" >
+				<div class="wid"></div>
+			</a>
+
+</body></html>

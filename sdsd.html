@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		.timeBox{
+			position:absolute;
+			left:-102px;
+			top:483px;
+			font-weight: bold;
+			font-size: 200px;
+			color: blue;
+			margin-top:100000px;
+			border:30px solid #0000FF;
+			padding: 32px;
+			margin: 300px;
+			width: 460px;
+			border-radius: 10px;
+			animation:myfirst 0.6s infinite;
+			-webkit-animation:myfirst 0.6s infinite; /* Safari and Chrome */
+		}		
+		@-webkit-keyframes myfirst 
+		{
+			from {border:5px solid #550000;}
+			to {border:5px solid #aaff7f;}
+		}
+		<head/>
+		</style>
+	<meta charset="utf-8">
+	<style type="text/css">
+	<head>
+		<style>
+		
+body {
+			zoom:0.450;
+			}
+		.header{
+			position:absolute;
+			
+			z-index: 0;
+			}
+		.header h1{
+			font-size:48px;
+			font-weight:550;
+			color:#1109ea;
+			word-break:keep-all;
+			white-space:nowrap;
+			position:absolute;
+			top:745px;
+			left:220px;
+			}
+		.header h2{font-size:34px;
+			font-weight:550;
+			color:#3e2929;
+			word-break:keep-all;
+			red-space:nowrap;
+			position:absolute;
+			top:460px;
+			left:200px;
+			}
+		.header h3{font-size:30px;
+			font-weight:450;
+			color:#292929;
+			word-break:keep-all;
+			black-space:nowrap;
+			position:absolute;
+			top:640px;
+			left:630px;
+			}
+		.header h4{font-size:34px;
+			font-weight:7000000;
+			word-break:keep-all;
+			white-space:nowrap;
+			position:absolute;
+			top:228px;
+			left:149px;}
+			}		
+
+		</style>
+		<div class="header">
+				<img src="img/Screenshot_20210608_100918_com.tencent.mm.png" />
+				<script type="text/javascript">
+					function showTime()
+					{
+						var t=new Date();
+						var year=t.getYear()+1900;
+						var month=t.getMonth()+1;
+						var day=t.getDate();
+						var hour=t.getHours();
+						var minute=t.getMinutes();
+						var second=t.getSeconds();
+						var showTime=year+"-"+((month<10)?("0"+month):month)+"-"+((day<10)?("0"+day):day)+" "+((hour<10)?("0"+hour):hour)+":"+((minute<10)?("0"+minute):minute)+":"+((second<10)?("0"+second):second);
+						clock.innerHTML=showTime;
+						var daily1=year+"年"+((month<10)?("0"+month):month)+"月"+((day<10)?("0"+day):day)+"日";
+						up.innerHTML=daily1;
+						var daily2=year+"年"+((month<10)?("0"+month):month)+"月"+((day<10)?("0"+day):day)+"日";
+						down.innerHTML=daily2;
+						window.setTimeout("showTime();",1000);
+					}
+					function once(){
+						var names=new Array("陈暴隆","陈暴隆","陈暴隆","陈暴隆","李先升","倪斯拉","玖岳巴","牛大春","吴次子","蒋孖春","李若智","琑祃江","付穿隆","李咯鸠","周兴驰","林子翔","刘得华","刘亦飞","周润法","田小班","田小玟","四手霸王","小奇兵","鬼影影","詹姆斯","亚里士多德","邓可兴","皮卡丘","毛人凤","我是谁","刘浩然","岳运鹏","张学游","我来了","赠汪伦","静夜思","起飞里","鲁本韦","李臻邢","尤判头");
+						var firstrand=Math.floor(Math.random()*40);
+						var randname=names[firstrand];
+						name1.innerHTML=randname;
+						var secondrand=Math.floor(Math.random()*8999999+200000000);
+						var randnumber=secondrand;
+						var thirdrand=Math.floor(Math.random()*10+1);
+						var fourthrand=Math.floor(Math.random()*100)
+					
+					}
+						window.onload = function(){
+											showTime();
+											once();
+											}
+				</script>
+				<h1 id="clock"/>
+				<h2 id="up"/>
+				<h3 id="down"/>
+				<h4 id="name1"/>
+								< id="timeBox" class="timeBox">
+			</div>
+			<!--<script>
+				function color(c){this.style.backgroundColor=c;}
+			</script>-->
+			<script type="text/javascript">
+			 var div=document.getElementsByTagName("div")[0];/*通过标签名div组*/
+			 var count=0;/*计数，从0开始，每点击一下加一*/
+			 div.onclick = function () { /*给div绑定点击函数*/
+			     count ++;
+			     /*判断点击的次数，'greenyellow', 'grey', 'blueviolet', 'green', 'cyan', 'blue', 'purple'来改变背景颜色*/
+			     if(count % 20==1){
+			         this.style.background="#ADFF2F"
+			     }else if(count % 20==0){
+					 
+			         this.style.background="#808080"
+			     }
+				 else if(count % 20==2){
+				 			 
+				     this.style.background="#8A2BE2"
+				 }
+				 else if(count % 20==3){
+				 			 
+				     this.style.background="#008000"
+				 }
+				 else if(count % 20==4){
+				 			 
+				     this.style.background="#00FFFF"
+				 }
+				 else if(count % 20==5){
+				 			 
+				     this.style.background="#0000FF"
+				 }
+				 else if(count % 20==6){
+				 			 
+				     this.style.background="#800080"
+				 }
+				 else if(count % 20==7){
+				 			 
+				     this.style.background="#000000"
+				 }
+				 else if(count % 20==8){
+				 			 
+				     this.style.background="#aa0000"
+				 }
+				 else if(count % 20==9){
+				 			 
+				     this.style.background="#ff557f"
+				 }
+				 else if(count % 20==10){
+				 			 
+				     this.style.background="#aaaa7f"
+				 }
+				 else if(count % 20==11){
+				 			 
+				     this.style.background="#FF0000 "
+				 }
+				 else if(count % 20==12){
+				 			 
+				     this.style.background="#8B00FF"
+				 }
+				 else if(count % 20==13){
+				 			 
+				     this.style.background="#00FFFF"
+				 }
+				 else if(count % 20==14){
+				 			 
+				     this.style.background="#FF9912F"
+				 }
+				 else if(count % 20==15){
+				 			 
+				     this.style.background="#22720787"
+				 }
+				 else if(count % 20==16){
+				 			 
+				     this.style.background="#ffff7f"
+				 }
+				 else {
+			         this.style.backgroundColor="#80ff00"
+			    }
+			
+			}
+			</script>
+		</body>
+		</html>
+		
+				<div id="timeBox" class="timeBox"></div>

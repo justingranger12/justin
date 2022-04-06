@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0128)http://23.225.191.45/gduf_io/student-index.html?studentName=%E5%91%A8%E6%98%9F%E6%98%9F&studentId=199854088&studentSex=%E7%94%B7 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+    <title>出校申报</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="./出校申报_files/app.css">
+    <style>
+		.title-bar {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			background-color: #6cb0fb;
+			color: #fff;
+			padding: 10px 5px;
+		}
+		.title-bar .title-text {
+			flex: 1;
+			padding-left: 16px;
+		}
+		.title-bar .title-icon {
+			width: 26px;
+			height: 26px;
+		}
+        .footerBtnBox {
+            padding: 10px;
+            height: 54px;
+        }
+
+        .mui-card-footer.footerBtnBox .mui-card-link {
+            text-align: center;
+            background: #3a96fa;
+            width: 49%;
+            display: block;
+            color: #fff;
+            border-radius: 5px;
+            line-height: 34px;
+            height: 34px;
+            transition: all 0.3s;
+        }
+
+        .mui-card-footer.footerBtnBox .mui-card-link:last-child {
+            background: #EA5628
+        }
+
+        .mui-card-footer.footerBtnBox .mui-card-link:last-child:active {
+            background: #CF2D28
+        }
+
+        .mui-card-footer.footerBtnBox .mui-card-link:active {
+            background: #007AFF;
+        }
+    </style>
+</head>
+
+<body onload="inshcool()" style="background: #fff">
+	<header>
+		<div class="title-bar">
+			<a class="return">
+				<img class="title-icon" src="./img/return.png">
+			</a>
+			<a class="return">
+				<img class="title-icon" src="./img/close.png">
+			</a>
+			<span style="width:100%;text-align:left;display:block; class="title-text">&nbsp&nbsp出校申报详情</span>
+
+			<img class="title-icon" src="./img/more.png">
+		</div>
+	</header>
+    <div class="mui-content" id="outSchoolBox" style="padding-bottom: 45px;"><div class="mui-card"><div class="mui-card-header">申请编号：2022032240457</div><div class="mui-card-content"><div class="mui-card-content-inner"><div>姓<span style="visibility: hidden;">空空</span>名：周星星</div><div>学<span style="visibility: hidden;">空空</span>号：199854088</div><div>开始时间：2022-03-22</div><div>结束时间：2022-03-25</div><div>外出类型：临时出校（一天仅一次）</div><div>涉及天数：3天</div><div>出入次数：每天出入一次</div><div>状<span style="visibility: hidden;">空空</span>态：<font color="green">审批通过</font></div><div>提交时间：2022-03-22 14:43:45</div></div></div><div class="mui-card-footer footerBtnBox"><a class="mui-card-link" href="chuxiaoshenbaoxiangqing.html">详情</a><a class="mui-card-link" style="background:#eee;color:#999">取消</a></div></div><div class="mui-card"><div class="mui-card-header">申请编号：2022032240457</div><div class="mui-card-content"><div class="mui-card-content-inner"><div>姓<span style="visibility: hidden;">空空</span>名：周星星</div><div>学<span style="visibility: hidden;">空空</span>号：199854088</div><div>开始时间：2022-03-22</div><div>结束时间：2022-03-25</div><div>外出类型：临时出校（一天仅一次）</div><div>涉及天数：3天</div><div>出入次数：每天出入一次</div><div>状<span style="visibility: hidden;">空空</span>态：<font color="green">审批通过</font></div><div>提交时间：2022-03-22 14:43:45</div></div></div><div class="mui-card-footer footerBtnBox"><a class="mui-card-link" href="出校申报详情">详情</a><a class="mui-card-link" style="background:#eee;color:#999">取消</a></div></div></div>
+ 
+	<nav class="footerNav">
+        <button class="whiteBtn">
+            <span class="mui-icon mui-icon-more"></span>
+            <span>申请记录</span>
+        </button>
+        <button>
+            <span class="mui-icon mui-icon-compose"></span>
+            <span>出校申报</span>
+        </button>
+    </nav>
+    <script src="./mui.min.js.download"></script>
+    <script src="./jquery.min.js.download"></script>
+    <script src="./common.js.download"></script>
+    <script type="text/javascript" src="./util.js.download"></script>
+    <script type="text/javascript" charset="utf-8">
+        function getMyOutSchool(result) {
+            var randomNum = '';
+            for (var i = 0; i < 5; i++) {
+                randomNum += Math.floor(Math.random() * 10);
+            }
+            var html = '';
+            for (var i = 0; i < 2; i++) {
+                html += '<div class="mui-card">';
+                html += '<div class="mui-card-header">申请编号：' + new Date().Format("yyyyMMdd" + randomNum) + '</div>';
+                html += '<div class="mui-card-content">';
+                html += '<div class="mui-card-content-inner">';
+                html += '<div>姓<span style="visibility: hidden;">空空</span>名：' + getParam()["studentName"] + '</div>';
+                html += '<div>学<span style="visibility: hidden;">空空</span>号：' + getParam()["studentId"] + '</div>';
+                html += '<div>开始时间：' + new Date().Format("yyyy-MM-dd") + '</div>';
+                html += '<div>结束时间：' + new Date(new Date().getTime() + 259200000).Format("yyyy-MM-dd") + '</div>';
+                html += '<div>外出类型：临时出校（一天仅一次）</div>';
+                html += '<div>涉及天数：3天</div>';
+                html += '<div>出入次数：每天出入一次</div>';
+                html += '<div>状<span style="visibility: hidden;">空空</span>态：' + formatStatus() + '</div>';
+                html += '<div>提交时间：' + new Date(new Date().getTime() - 14400000).Format("yyyy-MM-dd hh:mm:ss") + '</div>';
+                html += '</div>';
+                html += '</div>';
+                html += '<div class="mui-card-footer footerBtnBox">';
+                html += '<a class="mui-card-link" href="student-detail.html' + location.search + '"' + '>详情</a>';
+                html += '<a class="mui-card-link" style="background:#eee;color:#999">取消</a>';
+                html += '</div>';
+                html += '</div>';
+            }
+            $("#outSchoolBox").html(html);
+        }
+
+
+    </script>
+
+
+</body></html>

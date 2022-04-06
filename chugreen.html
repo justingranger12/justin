@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)https://leesshh.github.io/FakeYiBan/in.html?studentId=19984088&studentName=%E7%8E%8B%E5%8A%9B%E5%AE%8F -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>出入凭证</title>
+	<meta name="theme-color" content="#6DB0FA">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<style>
+		.infoBox {
+			padding: 0 5px;
+			line-height: 30px;
+			font-size: 16px;
+			color: white;
+		}
+
+		.title {
+			font-weight: bold;
+			font-size: 20px;
+			margin: 20px 0;
+		}
+
+		.content p {
+			color: white;
+			line-height: 25px;
+			margin: 0;
+			font-size: 16px;
+		}
+
+		.btnBox {
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		.btnBox button {
+			min-width: 70%;
+			font-size: 35px;
+			height: 200px;
+		}
+
+		.timeBox {
+			text-align: center;
+			font-weight: bold;
+			font-size: 26px;
+			color: white;
+			margin-top: 15px;
+			padding: 0 10px;
+			margin: 20px auto 0 auto;
+			width: 100%;
+			height: 35px;
+			border-radius: 5px;
+		}
+
+
+
+		#remainingTime {
+			text-align: center;
+			color: white;
+			margin-bottom: 20px;
+		}
+
+		@keyframes kf-black {
+			from {
+				color: black;
+			}
+
+			to {
+				color: #eee;
+			}
+		}
+
+		@keyframes kf-greenyellow {
+			from {
+				color: greenyellow;
+			}
+
+			to {
+				color: #eee;
+			}
+		}
+
+		@keyframes kf-blueviolet {
+			from {
+				color: blueviolet;
+			}
+
+			to {
+				color: #eee;
+			}
+		}
+
+		@keyframes kf-green {
+			from {
+				color: green;
+			}
+
+			to {
+				color: #eee;
+			}
+		}
+
+		@keyframes kf-cyan {
+			from {
+				color: cyan;
+			}
+
+			to {
+				color: #eee;
+			}
+		}
+
+		@keyframes kf-blue {
+			from {
+				color: blue;
+			}
+
+			to {
+				color: #eee;
+			}
+		}
+
+		@keyframes kf-purple {
+			from {
+				color: purple;
+			}
+
+			to {
+				color: #eee;
+			}
+		}
+
+		#typeBox {
+
+			font-size: 100px;
+			font-weight: bold;
+			color: #000;
+			width: 160px;
+			line-height: normal;
+			text-align: center;
+			display: block;
+			margin: 0px auto 0px auto;
+
+		}
+
+		@-webkit-keyframes myfirst
+
+		/* Safari and Chrome */
+			{
+			from {
+				border: 3px solid #0000FF;
+			}
+
+			to {
+				border: 3px solid #fff;
+			}
+
+
+		}
+
+		#checkNA {
+			text-align: center;
+			color: red;
+			font-size: 34px;
+			font-weight: bold;
+		}
+
+		#checkCode {
+			text-align: center;
+			color: red;
+			font-size: 26px;
+			font-weight: bold;
+		}
+		.title-bar {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			background-color: #6cb0fb;
+			color: #fff;
+			padding: 10px 5px;
+		}
+		.title-bar .title-text {
+			flex: 1;
+			padding-left: 16px;
+		}
+		.title-bar .title-icon {
+			width: 26px;
+			height: 26px;
+		}
+		body {
+			padding: 0;
+			margin: 0;
+		
+		}
+		#header{position:relative;}
+		#header #wai{
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			color:red;
+			top: -500px;
+			left: -50px;
+			padding: 20px;
+		}
+		#header #wai .wid{
+			margin: 20px;
+			/* background-color: #ff00ff; */
+			border: 0px solid blue;
+			float: left;
+			color:blue;
+			left: 10px;
+			width: 50px;
+			height: 50px;
+			margin-right: 40px;
+			}
+	</style>
+</head>
+
+<body onload="inshcool()" style="background: green">
+	<header>
+		<div class="title-bar">
+			<a class="return">
+				<img class="title-icon" src="./img/return.png">
+			</a>
+			<span style="width:100%;text-align:center;display:block; class="title-text">出入凭证</span>
+			<img class="title-icon" src="./img/more.png">
+		</div>
+  </header>
+	<div class="infoBox">
+		<div class="title" style="text-align: center;">
+			<font class="typeTxt">出</font>校凭证
+		</div>
+		<div class="content">
+			<p style="text-indent: 2em;">
+				<span id="studentName" style="text-decoration: none;font-weight: bold;">周星星（199854088）</span>
+				同学可于
+				<span id="startTime" style="font-weight: bold;">2022-03-20</span>
+
+				<font class="typeTxt">出</font>校。
+			</p>
+
+			<!-- <p id="rxbz" style="text-indent: 2em;">注：必须在<span id="inSchoolEndTime"
+					style="font-weight: bold;"></span>前返校。</p> -->
+
+		</div>
+		<div style="overflow: hidden;margin-top: 50px;">
+
+			<div id="remainingTime" class="remainingTimeBox">该凭证<b>00:04:53</b>后将失效，请尽快出校</div>
+			<div id="checkNA"></div>
+			<div id="typeBox" style="animation: 0.6s ease 0s infinite normal none running kf-green;">出</div>
+			<div id="checkCode"></div>
+			<div id="timeBox" class="timeBox">2022-03-20 22:28:02</div>
+			<div id="tipBox"></div>
+		</div>
+	</div>
+
+<script src="./mui.min.js"></script>
+<script src="./jquery.min.js"></script>
+<script src="./common.js"></script>
+<script>
+	var iset;
+	var now = 0;
+	var nowT;
+	var endTime = new Date().getTime() + 300000;
+	var dateColorArr = ['kf-greenyellow', 'kf-black', 'kf-blueviolet', 'kf-green', 'kf-cyan', 'kf-blue', 'kf-purple'];
+
+	function getParam() {
+		var url = location.search; //获取url中"?"符后的字串
+		if (url.indexOf("?") != -1) {
+			var str = url.substr(1);
+			strs = str.split("&");
+			studentId = decodeURIComponent(strs[0].replace("studentId=", ""));
+			studentName = decodeURIComponent(strs[1].replace("studentName=", ""));
+			var info = new Array(studentName, studentId);
+			return info;
+		}
+	}
+
+	function inshcool() {
+		now = new Date().getTime();
+		nowT = setInterval(function () {
+			now = now + 1000;
+			$("#timeBox").html(new Date(now).Format("yyyy-MM-dd hh:mm:ss"));
+			var s = endTime - now;
+			$("#remainingTime").html("该凭证<b>" + formatDuring(s) + "</b>后将失效，请尽快出校")
+		}, 1000);
+		$("#startTime").html(new Date().Format("yyyy-MM-dd"));// 出校
+		$("#inSchoolEndTime").html(new Date(new Date().getTime() + 14400000).Format("yyyy-MM-dd hh:mm:ss"));//必须进校
+		$("#studentName").html(getParam()[0] + "（" + getParam()[1] + "）");
+		$("#typeBox").html("出");
+		$("#typeBox").css("animation", dateColorArr[new Date().getDay()] + " 0.6s infinite");
+		$("#typeBox").css("-webkit-animation", dateColorArr[new Date().getDay()] + " 0.6s infinite");
+	}
+
+	function formatDuring(mss) {
+		var hours = parseInt((mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		hours = hours < 10 ? "0" + hours : hours;
+		var minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
+		minutes = minutes < 10 ? "0" + minutes : minutes;
+		var seconds = parseInt((mss % (1000 * 60)) / 1000);
+		seconds = seconds < 10 ? "0" + seconds : seconds;
+		return hours + ":" + minutes + ":" + seconds;
+	}
+
+	$('.return').on('click', function () {
+		location.href = `./requestRecord.html${location.search}`;
+	})
+</script>
+	<div id="header">
+		<div id="wai">
+			<a href="chuxiaoshenbaoxiangqing.html" >
+				<div class="wid"></div>
+			</a>
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>
